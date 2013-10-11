@@ -6,18 +6,27 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		$(document).on('ready',function(){
-			/* Ejemplo1
+			//este ejemplo muestra opciones avanzadas de uso de 
+			//los selectores
+
+			// Ejemplo1: seleccionamos la etiqueta div que tiene 
+			// la clase miDiv
+			/*
 			$('div.miDiv').css({
 				'background-color':'#000',
 			})
+			*/
 
-			*/
-			/* Ejemplo2 */
-			$('div.miDiv article p').text('Selectores avanzados');
+			// Ejemplo2: seleccionamos la etiqueta p que está
+			// dentro de un article y éste está dentro de un
+			// div.miDiv
+			// $('div.miDiv article p').text('Selectores avanzados');
 			
-			/* Ejemplo 3: hay que colocar id en los <p> y añadir al final una etiqueta <span>
-			$('#parrafo1,#parrafo2, span')
-			*/
+			// Ejemplo 3: modo de seleccionar varias etiquetas a la vez
+			//hay que colocar id en los <p> y añadir al final una etiqueta <span>
+			
+			$('#parrafo1,#parrafo2, span').text('tres a la vez');
+			
 
 		})
 	</script>
