@@ -7,19 +7,29 @@
 	<script>
 		$(document).on('ready',function(){
 			/*
+			// Ejemplo de uso de eventos en jQuery
+
+			// Ejemplo de manejo del evento click
 			$('a').on('click',function(){
 				//this es el elemento que disparó el evento
 				//sería el elemento <a>
 				console.log($(this).attr('id'));
 			})
 			*/
+
+			//Otro ejemplo similar
+			/*
 			$('a').on('click',function(e){
 				console.log(e.pageX); //e.screenX)
+				// probar e.preventDefault
+				// probar e.type
 			})
-			// e.preventDefault
-			// e.type
-
-			//vincular y desvincular eventos
+			*/
+			
+			//Ejemplo que muestra cómo vincular y desvincular eventos
+			// se usan los métodos mouseover y mouseout
+			// para más información hay que consultar la web de jQuery
+			/*
 			var caja1bg;			
 			$('#caja1').mouseover(function(){
 				caja1bg=$('#caja1').css('background');
@@ -28,6 +38,8 @@
 			$('#caja1').mouseout(function(){
 				$(this).css('background',caja1bg);
 			})
+			*/
+
 		});
 	</script>
 	<style>
