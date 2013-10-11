@@ -6,23 +6,32 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		$(document).on('ready',function(){
-			//métodos utilidades: 
-			// recorrer una col: $.each(col, function(index,elem)
-			// { console.log(index+' '+ elem) })
+			//métodos útiles: each
+			// recorrer una colección: 
+			// var col=['uno','dos','tres'];
+			// $.each(col, function(index,elem)
+			// { console.log(index+' '+ elem) 
+			//	});
 
-			// localizar un elto en una col $.inArray(valor,col)
+			// Localizar un elemento en una col $.inArray(valor,col)
 			// ese método devuelve el índice del elto o -1
+			
+			//Elimina espacios al principio y al final de una cadena
+			//var cadena='           ho  la           ';
+			//$.trim(cadena) 
 		
-			//$.trim(cadena) (elimina espacios al ppio y al final)
-		
-			//$.data(elemento, atributo,valor)
-			$('ul li').each(function(index,elem){
-				//este método sirve para escribir el atr posicion
-				$.data(elem,'posicion',index);
-			});
-			$('ul li').each(function(index,elem) {
-				console.log($.data(elem,'posicion'));
-			})
+			//Método data sirve para escribir el par atributo-valor en
+			// el elemento indicado
+			// La estructura sería así: $.data(elemento, atributo,valor)
+			// ejemplo:
+			// $('ul li').each(function(index,elem){
+				//$.data(elem,'posicion',index);
+			//});
+
+			// Otro ejemplo de uso del método data
+			//$('ul li').each(function(index,elem) {
+			//	console.log($.data(elem,'posicion'));
+			//})
 		});
 	</script>
 </head>
