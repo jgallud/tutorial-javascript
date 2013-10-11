@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Eventos personalizados</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+		// Como crear eventos personalizados
+		$("#miInput").on('cambio', function(){
+			var ele=$('#miInput');
+			// Observa que utilizamos el método prop para leer y escribir
+			// los atributos del checkbox
+			if(ele.prop('checked'))
+			{
+				ele.prop('checked',false);
+				$('.cambiar').text('Encender');
+			}
+			else
+			{
+				ele.prop('checked',true);
+				$('.cambiar').text('Apagar');	
+			}
+		});
+		$('.cambiar').on('click',function(){
+			$('#miInput').trigger('cambio');
+		});
+		});
+	</script>
+</head>
+<body>
+	<input type='checkbox' id='miInput' checked="checked">
+	<button class='cambiar'>Apagar</button>
+</body>
+</html>
