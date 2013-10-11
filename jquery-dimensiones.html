@@ -42,9 +42,10 @@
 	</style>
 	<script>
 		$(document).on('ready',function(){
-			/* Ejemplo1: devuelve el ancho sin unidades*/
+			/* Ejemplo1: devuelve el ancho de la etiqueta <header> sin unidades*/
 			console.log($('header').width()); 
-			/*alternativa con unidades: console.log($('header').css('width'));*/
+			/*alternativa con unidades: 
+			console.log($('header').css('width'));*/
 
 			/* Ejemplo2: set de width 
 			$('header img').width(100);
@@ -52,6 +53,7 @@
 
 			/*Ejemplo de get con height */
 			console.log($('#e1').height());
+			
 			/* ejemplo set height
 			$('#e1').height(50); */
 
@@ -66,7 +68,7 @@
 </head>
 <body>
 	<header>
-		<img src="C:\Users\jgallud\Pictures\logomtw.jpg" alt="CF"/>
+		<img src="http://mtw.uclm.es/images/logoMTW.jpg" alt="CF"/>
 	</header>
 	<div id='e1'>Primer div</div>
 	<div id="e2"><p>Segundo div</p></div>
