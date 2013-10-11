@@ -7,10 +7,12 @@
 	<script>
 		$(document).on('ready',function(){
 			$('button').on('click', function(){
-			/* agrega un elemento al final (el primero: ol:first)
-				primero selecciono el elto a mover y luego el destino
-				$('ol li:first').appendTo('ol');
-			*/
+			// Ejemplos de copiar, mover elementos HTML
+
+			// Agrega un elemento al final (el primero: ol:first)
+			//	primero selecciono el elto a mover y luego el destino
+			//	$('ol li:first').appendTo('ol');
+			
 			/*otro modo de hacer lo mismo
 				$('ol:first').append($('ol li:first'));
 			*/
@@ -20,11 +22,13 @@
 			
 			$('ol:first').prepend($('ol li:last'));
 			*/
+
 			/* insert 
 			$('ol li:first').insertAfter('#e1');
 			
 			$('#e1').after($('ol li:first'));
 			*/
+			
 			/*metodo insertBefore
 			$('ol li:first').insertBefore('#e1');
 			$('#e1').before($('ol li:first'));
@@ -36,12 +40,12 @@
 			*/
 
 			/*crear nuevos elementos*/
-			var nuevoElto=$('<p>Nuevo elemento</p>');
+			// var nuevoElto=$('<p>Nuevo elemento</p>');
 			// $('#e1').before(nuevoElto);	
 			//$('#e2').append(nuevoElto);
 
 			//eliminar elementos
-			$('ol li:last').remove();
+			//$('ol li:last').remove();
 			});			
 		});
 	</script>
