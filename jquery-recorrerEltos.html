@@ -6,21 +6,34 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<script>
 		$(document).on('ready',function(){
+			// Ejemplo para ilustrar cómo recorrer elementos
+
 			//var sig=$('#elto1').next().text();
+			//console.log(sig);
+
 			//var sig=$('#elto1').first().text();
+			//console.log(sig);
+
 			//var sig=$('ul li').next().text();
 			//console.log(sig);
+
 			//var sig=$('#test').parent().text();
 			//console.log(sig);
+
 			//console.log($('#test').parent().attr('id'));
+
 			//console.log($('#padre').children().attr('id'));
 			
+			//el método siblings devuelve los elementos del mismo nivel
+			//en este caso debería devolver todos los <li>
 			//ete ejemplo da error:
 			//console.log($("#elto1").siblings());
+
 			/* recorrer todos los elementos de la lista
 			$('ul li').each(function(index,elem){
 				console.log('Elemento num:'+$(index).text()+' contiene:'+$(elem).text());
 			})
+			
 			*/
 		});
 	</script>
