@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta charset="utf-8">
+	<title>Get y Set</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script>
+		$(document).on('ready',function(){
+			$('body,html').css('background','#FFF');
+
+			/* Modificar una propiedad */
+			$('h1').css('text-align','center');
+
+			/* Ejemplo2: para modificar varias propiedades */
+			var cssH1={
+				'text-align':'center',
+				'color':'red'
+			}
+
+			$('h1').css(cssH1);
+			/* también podríamos haber puesto directamente el objeto Json 
+			dentro del método css*/
+
+
+			/* Ejemplo3: condiciones */
+			var bgItem2 = $('#item2').css('background-color');
+			var cItem2 = $('#item2').css('color');
+
+			if (bgItem2==cItem2)
+				console.log('tienen el mismo color'+bgItem2);
+
+
+		});
+	</script>
+	<style>
+		body,html
+		{
+			background: #CCC;
+			color:red;
+			font-family: Arial;
+			margin:0;
+			padding: 0;
+		}
+		#item1
+		{
+			background: #F6F6F6;
+			height:50px;
+			margin:5% auto; 
+			width:300px;
+		}
+
+		#item2
+		{
+			display: block;
+			background: #000;
+			height:50px;
+			margin:5% auto; 
+			width:300px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Método CSS</h1>
+	<div id="item1">Elemento 1</div>
+	<div id="item2">Elemento 2</div>
+</body>
+</html>

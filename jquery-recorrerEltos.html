@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Recorrer elementos</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			//var sig=$('#elto1').next().text();
+			//var sig=$('#elto1').first().text();
+			//var sig=$('ul li').next().text();
+			//console.log(sig);
+			//var sig=$('#test').parent().text();
+			//console.log(sig);
+			//console.log($('#test').parent().attr('id'));
+			//console.log($('#padre').children().attr('id'));
+			
+			//ete ejemplo da error:
+			//console.log($("#elto1").siblings());
+			/* recorrer todos los elementos de la lista
+			$('ul li').each(function(index,elem){
+				console.log('Elemento num:'+$(index).text()+' contiene:'+$(elem).text());
+			})
+			*/
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<article id="padre">
+			Hooola
+			<div id="test">un hijo</div>
+			<div id="test2">otro hijo</div>
+		</article>
+	</div>
+	<ul>
+		<li id="elto1">Elemento 1</li>
+		<li>Siguiente elemento</li>
+		<li></li>
+	</ul>
+</body>
+</html>

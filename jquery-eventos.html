@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Eventos</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			/*
+			$('a').on('click',function(){
+				//this es el elemento que disparó el evento
+				//sería el elemento <a>
+				console.log($(this).attr('id'));
+			})
+			*/
+			$('a').on('click',function(e){
+				console.log(e.pageX); //e.screenX)
+			})
+			// e.preventDefault
+			// e.type
+
+			//vincular y desvincular eventos
+			var caja1bg;			
+			$('#caja1').mouseover(function(){
+				caja1bg=$('#caja1').css('background');
+				$(this).css('background','red');
+			})
+			$('#caja1').mouseout(function(){
+				$(this).css('background',caja1bg);
+			})
+		});
+	</script>
+	<style>
+	</style>
+</head>
+<body>
+	<a href='http://www.uclm.es' id='evento'>Hola uclm</a>
+	<a href='http://www.uclm.es' id='evento2'>Hola segundo uclm</a>
+	<div id="caja1">Hola que tal</div>
+</body>
+</html>

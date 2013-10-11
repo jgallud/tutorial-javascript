@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+		<script type="text/javascript">
+		window.addEventListener("load",function(){
+			alert("La página se ha cargado");
+		});
+		window.addEventListener("keydown",teclaPulsada);
+		function botonClick(evento){
+			alert("Hola colega");
+			alert(evento.type);
+			alert(evento.screenX);
+			/* boton.removeEventListener("click",botonClick) */
+		};
+		function teclaPulsada(evento)
+		{
+			alert(evento.keyCode);
+		}
+	</script>	
+</head>
+<body>
+	<button id='miBoton'>Haz click aquí</button>
+	
+	<script type="text/javascript">
+		var boton=document.getElementById('miBoton');
+		boton.addEventListener('click', botonClick);
+
+	</script>
+
+</body>
+</html>

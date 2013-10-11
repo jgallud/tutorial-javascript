@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejemplo JQuery</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+			
+		$(document).on('ready',function(){
+			$('#prueba').text('<p>hola mundo</p>'); /* no es html, es solo texto*/
+
+			$('.prueba').html('<strong>Usando JQuery</strong>');
+		})
+
+		/*
+		$(function(){
+
+		})
+		*/
+	</script>
+</head>
+<body>
+	<div id="prueba"></div>
+	<div class="prueba"></div>
+</body>
+</html>

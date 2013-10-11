@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Método Data</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			//métodos utilidades: 
+			// recorrer una col: $.each(col, function(index,elem)
+			// { console.log(index+' '+ elem) })
+
+			// localizar un elto en una col $.inArray(valor,col)
+			// ese método devuelve el índice del elto o -1
+		
+			//$.trim(cadena) (elimina espacios al ppio y al final)
+		
+			//$.data(elemento, atributo,valor)
+			$('ul li').each(function(index,elem){
+				//este método sirve para escribir el atr posicion
+				$.data(elem,'posicion',index);
+			});
+			$('ul li').each(function(index,elem) {
+				console.log($.data(elem,'posicion'));
+			})
+		});
+	</script>
+</head>
+<body>
+	<ul>
+		<li>uno</li>
+		<li>dos</li>
+		<li>tres</li>
+	</ul>
+</body>
+</html>

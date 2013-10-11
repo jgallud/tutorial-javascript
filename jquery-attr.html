@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Attr</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			var clase=$('#prueba').attr('class');
+			console.log(clase);
+
+			/* ejemplo 2*/
+			$('#prueba').attr('class','cambioClase');
+			console.log($('#prueba').attr('class'));
+
+			/*Para quitar atributo: removeAttr
+				$('#prueba').removeAttr('class');
+			*/
+
+			/*Otro modo de modificar atributos es con una función:*/
+			$('#prueba').attr('class',function(){
+				var cadena='NuevoAtributo';
+				return cadena;
+			});
+			console.log($('#prueba').attr('class'));
+
+			/*Ejemplo práctico del método attr*/
+			$('a').on('click',function(e){
+				var link=$(this).attr('href');
+				e.preventDefault();
+				alert('Esta siendo redireccionado');
+				location.href=link;
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div id="prueba" class="pruebaClass"></div>
+	<a href="http://www.uclm.es">UCLM</a>
+	<!--
+	<form>
+		<input type=''>
+		<input type='submit'>
+	</form>
+	-->
+</body>
+</html>

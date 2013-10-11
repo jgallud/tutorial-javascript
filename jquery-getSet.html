@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+		<meta charset="utf-8">
+	<title>Get y Set</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			var almacen=$("#parrafo").html(); /* Actúa como get*/
+			console.log(almacen);
+
+			$('#prueba').attr('class','ejemplo'); /* inspeccionar elemento*/
+
+			var clase=$('#prueba').attr('class');
+			console.log(clase);
+			console.log($('#prueba').attr('id'));
+
+		});
+	</script>
+</head>
+<body>
+	<p id="parrafo"><strong>Ejemplo</strong></p>
+	<div id="prueba"></div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Copiar, mover elementos</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			$('button').on('click', function(){
+			/* agrega un elemento al final (el primero: ol:first)
+				primero selecciono el elto a mover y luego el destino
+				$('ol li:first').appendTo('ol');
+			*/
+			/*otro modo de hacer lo mismo
+				$('ol:first').append($('ol li:first'));
+			*/
+
+			/*método prepend
+			$('ol li:last').prependTo('ol:first');	
+			
+			$('ol:first').prepend($('ol li:last'));
+			*/
+			/* insert 
+			$('ol li:first').insertAfter('#e1');
+			
+			$('#e1').after($('ol li:first'));
+			*/
+			/*metodo insertBefore
+			$('ol li:first').insertBefore('#e1');
+			$('#e1').before($('ol li:first'));
+			*/
+
+			/*clonar elementos: no lo quita de la lista
+			var clon=$('ol li:first').clone();
+			$('#e1').before(clon);
+			*/
+
+			/*crear nuevos elementos*/
+			var nuevoElto=$('<p>Nuevo elemento</p>');
+			// $('#e1').before(nuevoElto);	
+			//$('#e2').append(nuevoElto);
+
+			//eliminar elementos
+			$('ol li:last').remove();
+			});			
+		});
+	</script>
+		<style>
+		html,body
+		{
+			background: #000;
+			color:#FFF;
+			margin:0;
+			padding:0;
+		}
+		header
+		{
+			display:block;
+			margin:0 auto 50px auto;
+			width:365px;
+		}
+		ol
+		{
+			display:block;
+			width:500px;
+			margin:0 auto;
+		}
+		ol li
+		{
+			background: #088A29;
+			height:30px;
+			margin:5px auto;
+			width:100px;
+		}
+		button
+		{
+			display:block;
+			margin:0 auto;
+		}
+		#e1
+		{
+			display:block;
+			width:500px;
+			margin:0 auto;
+			background: #FF0040;
+			height:150px;
+		}
+		div
+		{
+			background: #FE2E64;
+			height: 50px;
+			display: block;
+			width:400px;
+			margin:2px auto;
+		}
+		p
+		{
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="" alt="CF" />
+	</header>
+	<ol>
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+		<li>Elemento 4</li>		
+	</ol>
+	<button id="test">Ejecutar</button>
+	<div id='e1'><p>Primer div</p></div>
+	<div id="e2"><p>Segundo div</p></div>
+</body>
+</html>

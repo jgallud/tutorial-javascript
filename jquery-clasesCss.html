@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clases CSS</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<style>
+		.test
+		{
+			background-color: red;
+		}
+	</style>
+	<script>
+		$(document).on('ready',function(){
+			$(document).on('click',function(){
+				/* para este ejemplo hay que quitar class='test' del div
+				$('#test').addClass('test');*/
+
+				/* El siguiente ejemplo requiere class='test' en el div 
+				$('#test').removeClass('test');*/
+
+				/* toggleClass - si la tiene la quita y si no la tiene la agrega */
+				$('#test').toggleClass('test');
+				if ($('#test').hasClass('test'))
+					$('#test').text('Tengo la clase test')
+				else
+					$('#test').text('Oooh, no tengo la clase test');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id='test' class='test'>Click me</div>
+</body>
+</html>
