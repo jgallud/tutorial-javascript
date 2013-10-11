@@ -17,7 +17,7 @@
 				$('#prueba').removeAttr('class');
 			*/
 
-			/*Otro modo de modificar atributos es con una función:*/
+			/*Otro modo de modificar atributos: mediante una función:*/
 			$('#prueba').attr('class',function(){
 				var cadena='NuevoAtributo';
 				return cadena;
@@ -25,6 +25,8 @@
 			console.log($('#prueba').attr('class'));
 
 			/*Ejemplo práctico del método attr*/
+			// obsérvese el parámentro de la función (e),
+			// permite manejar el evento
 			$('a').on('click',function(e){
 				var link=$(this).attr('href');
 				e.preventDefault();
