@@ -7,9 +7,14 @@
 	<script>
 		$(document).on('ready',function(){
 		// Como crear eventos personalizados
-		$("#miInput").on('cambio', function(){
+		// Con el evento change conseguimos el mismo resultado
+		// Este ejemplo implementa ese comportamiento como si no existiera change
+		$("#miInput").on('cambio', function(ev,id){
 			var ele=$('#miInput');
-			// Observa que utilizamos el método prop para leer y escribir
+			//Esta función tiene dos parámetros: ev (evento) y id (id del elemento
+			//que lanzó el evento
+			console.log(id);
+ 			// Observa que utilizamos el método prop para leer y escribir
 			// los atributos del checkbox
 			if(ele.prop('checked'))
 			{
@@ -22,14 +27,15 @@
 				$('.cambiar').text('Apagar');	
 			}
 		});
-		$('.cambiar').on('click',function(){
-			$('#miInput').trigger('cambio');
+		$('button').on('click',function(){
+			$('#miInput').trigger('cambio',[$(this).attr('id')]);
 		});
 		});
 	</script>
 </head>
 <body>
 	<input type='checkbox' id='miInput' checked="checked">
-	<button class='cambiar'>Apagar</button>
+	<button class='cambiar' id="b1">Apagar</button>
+	<button class='cambuar' id="b2">Apagar</button>
 </body>
 </html>
