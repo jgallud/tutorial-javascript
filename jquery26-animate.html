@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Efectos</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://www.bitstorm.org/jquery/color-animation/jquery.animate-colors-min.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			//método animate: primer argumento es un objeto json
+			// segundo argumento es la duración en ms
+			//1-
+			/*
+			$('#caja1').animate({
+				'margin-bottom':0
+			},800)	
+			*/
+			//2-definimos una función al terminar la animación
+			// esta segunda función cambia el margin-top
+			/*
+			$('#caja1').animate({
+				'margin-bottom':0
+			},800,function(){
+				$('#caja1').animate({
+					'margin-top':-100,
+					'opacity':0.5
+				})
+			})	
+			*/
+			//Con el método animate solo podemos modificar valores numéricos
+			//Si quiero modificar un valor no numérico, como el color
+			//Hay un plugin para expandir la animación a colores
+			//bitstorm.org/jquery/color-animation
+			//agregamos el script arriba junto a jquery:
+			//<script src="http://www.bitstorm.org/jquery/color-animation/jquery.animate-colors-min.js">
+			/*
+			$('#caja1').animate({
+				'margin-bottom':0
+			},800,function(){
+				$('#caja1').animate({
+					'background-color':'#0FD',
+					'margin-top':-100,
+					'opacity':0.5
+				})
+			})	
+			*/
+		});
+	</script>
+	<style>
+		body,html{
+			padding:100px;
+		}
+		div
+		{
+			display:block;
+			height:80px;
+			width: 400px;
+			margin:0 auto;
+		}
+		#caja1{
+			background: rgba(56,56,56,0.8);
+			margin-bottom: 100px;
+		}
+		#caja2{
+			background: rgba(89,69,36,0.8);
+		}
+	</style>
+</head>
+<body>
+	<div id="caja1">Hola</div>
+	<div id="caja2">Hola</div>
+</body>
+</html>
