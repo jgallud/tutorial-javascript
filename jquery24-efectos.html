@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Efectos</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			//Comenzamos a ver los efectos de la librería jQuery
+			//Este ejemplo muestra cada uno de los métodos con
+			//efectos: show(), slide, fade, 
+			
+			var elem=$('#caja1');
+			$('#b1').click(function(){
+				//1-mostrar
+				//elem.show();
+
+				//2-Ahora probamos con slide
+				//elem.slideDown();
+
+				//3-
+				//elem.fadeIn();
+
+				//4-modificar la velocidad
+				// podemos poner un valor numérico (ms) 
+				// o bien poner slow o fast
+				//elem.fadeIn('slow');
+
+			});
+			$('#b2').click(function(){
+				//1-ocultar
+				//elem.hide();
+
+				//2-
+				//elem.slideUp();
+
+				//3-
+				//elem.fadeOut();
+
+				//4-
+				//elem.fadeOut('fast');
+			});
+
+		});
+	</script>
+	<style>
+		#caja1
+		{
+			background: rgba(56,56,56,0.8);
+			color:white;
+			display:block;
+			height:80px;
+			margin:5% auto;
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div id="caja1">Hola que tal estais</div>
+	<button id="b1">Mostrar</button>
+	<button id="b2">Ocultar</button>
+</body>
+</html>
