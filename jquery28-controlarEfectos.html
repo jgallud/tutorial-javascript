@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Controlar efectos</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			//ejemplo que muestra cómo controlar animaciones
+			
+			//Ejemplo 1: metodo stop() en funcion pararAnim()
+			//definimos un time-out:
+			/*
+			var to=setTimeout('pararAnim()',2000);
+
+			$('#caja1').animate({
+				'margin-bottom':0
+			},5000,function(){
+				$('#caja1').animate({
+					'background-color':'#0FD',
+					'margin-top':-100,
+					'opacity':0.5
+				})
+			})
+			*/
+
+			//Ejemplo 2: método delay	
+			//$('#caja1').slideUp().delay(2000).slideDown();
+
+			//Ejemplo 3: desactivar las animaciones colocando
+			//directamente los valores finales
+			// poner la siguiente linea al principio
+			//$.fx.off=true;
+
+		});
+
+		function pararAnim(){
+			$('#caja1').stop();
+		}
+	</script>
+	<style>
+		body,html{
+			padding:100px;
+		}
+		div
+		{
+			display:block;
+			height:80px;
+			width: 400px;
+			margin:0 auto;
+		}
+		#caja1{
+			background: rgba(56,56,56,0.8);
+			margin-bottom: 100px;
+		}
+		#caja2{
+			background: rgba(89,69,36,0.8);
+		}
+	</style>
+</head>
+<body>
+	<div id="caja1">Hola</div>
+	<div id="caja2">Hola</div>
+</body>
+</html>
