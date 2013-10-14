@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Efectos</title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			//para establecer una velocidad
+			$.fx.speeds.lento=3000;
+			$.fx.speeds.rapido=100;
+			$('#b1').click(function(){
+				//$('#ejemplo').fadeOut(); //'slow'
+				//$('#ejemplo').fadeOut('lento'); //'rapido'
+
+				//se puede disparar una función al terminar
+				$('#ejemplo').fadeOut('lento',function(){
+					//1-
+					//$('body').append('El elemento se ha borrado');
+
+					//2-
+					//$(this).remove(); //inspecciona elemento y comprueba elements
+					//comprueba el ejemplo con y sin remove()
+
+					//3-desaparece el elemento y lo volvemos a mostrar rápido
+					//$(this).fadeIn('rapido');
+				});				
+
+			})
+
+		});
+	</script>
+	<style>
+		#ejemplo
+		{
+			background: rgb(250,100,100);
+			height:200px;
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+	<div id="ejemplo">Hola</div>
+	<button id="b1">Fade out</button>
+</body>
+</html>
