@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).on('ready',function(){
+			var pet=$('#main form').attr('action');
+			var met=$('#main form').attr('method');
+			var nom,m,msj; //para enviar la info con nuestro propio objeto json (sin usar serialize())
+			var target=document.getElementById("#status");
+			
+			$('#main form').on('submit',function(e){
+				e.preventDefault();
+				
+				$.ajax({
+					beforeSend:function(){
+						//$('#status').spin({radius:2,width:2,heigh:2,length:4});
+						nom=document.fo.nombre.value;
+						m=document.fo.mail.value;
+						msj=document.fo.mensaje.value;
+					},
+					url:pet,
+					type:met,
+					data:$('#main form').serialize(), //esta es una manera de enviarlo
+					//data:{nombre:nom,mail:m,mensaje:msj},
+					success:function(resp){
+						$('#status').html('<img src=./ok.png />');
+						console.log(resp)
+					},
+					error:function(jqXHR,estado,error){
+						$('#status').html('<img src=./nook.png />');	
+						console.log(estado);
+						console.log(error)
+					},
+					complete:function(jqXHR,estado){
+						console.log(estado);
+					},
+					timeout:10000
+				})
+			})
+		})
+	</script>
+</head>
+<style>
+	*{margin:0;padding:0;}
+	body,html{
+		font-family: Myriad Pro, Arial;
+		background:#111a29;
+		color:#FFF;
+	}
+	#main{
+		display:block;
+		margin:0 auto;
+		width:400px;
+	}
+	#main h1
+	{
+		display:block;
+		width:100%;
+		text-align: center;
+	}
+	::selection
+	{
+		background: #e04c22;
+		color:#FFF;
+	}
+	form{
+		display:block;
+		width:100%;
+	}
+	input,textarea{
+		font-family: Myriad Pro,Arial;
+		color:#FFF;
+		border:0;
+		outline: 0;
+		background: #1f61ad;
+		border-radius: 1px;
+		font-size: 20px;
+		margin:10px auto;
+		width:95%;
+		display:block;
+		max-height: 100px;
+	}
+	textarea{
+		max-width: 95%;
+		height: 100px;
+	}
+	input[type=submit]
+	{
+		display:inline-block;
+		vertical-align: middle;
+		height: 25px;
+		width: 80px;
+		cursor: pointer;
+	}
+	#status{
+		display: inline-block;
+		vertical-align: middle;
+		width:20px;
+		height: 20px;
+	}
+	#status img{
+		display: inline-block;
+		vertical-align: middle;
+		width:20px;
+		height: 20px;
+	}
+
+</style>
+<body>
+	<div id="main">
+		<h1>Formulario de contacto</h1>
+		<form action="/peticion" name="fo" method="post">
+			<input type="text" name="nombre" placeholder="Nombre..." required>
+			<input type="email" name="mail" placeholder="Email..." required>
+			<textarea name="mensaje" placeholder="Mensaje..." require></textarea> 
+			<div style="display:block;width:60%;margin:0 auto">
+				<input type="submit" name="send" value="Enviar" />
+				<div id="status"></div>
+			</form>
+	</div>
+</body>
+</html>
