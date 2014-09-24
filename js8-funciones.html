@@ -2,16 +2,39 @@
 <head>
 	<title>Funciones 2</title>
 	<script type="text/javascript">
+		//Función sencilla
 		function MostrarMsg(){
 			alert("Esto es un mensaje");
 		}
+
+		//Función con parámetros y conversión de tipos
 		function Sumar(a,b){
 			alert("Suma="+(a+b).toString());
+		}
+
+		//Función con un número variable de parámetros
+		//para ello hace uso de la función arguments
+		function Sumar2(){
+			var s=0;
+			for (var i=0; i<arguments.length;i++)
+			{
+				s = s + arguments[i];
+			}
+			alert("Suma="+s);
+		}
+
+		//Función que devuelve un valor
+		function Restar(a,b){
+			var c=0;
+			c=a-b;
+			return c;
 		}
 	</script>
 </head>
 <body>
 	<input type="button" value="Mostrar Mensaje" onclick="MostrarMsg();">
-	<input type="button" value="Mostrar Suma" onclick="Sumar(10,20);">
+	<input type="button" value="Mostrar Suma 10+20" onclick="Sumar(10,20);">
+	<input type="button" value="Mostrar Suma numero variable de argumentos" onclick="Sumar2(10,20,3,5,100);">
+	<input type="button" value="Mostrar Resta" onclick="alert('Resta='+Restar(10,20));">
 </body>
 </html>
