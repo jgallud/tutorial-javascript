@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Ejemplos de funciones anonimas</title>
+	<script type="text/javascript">
+		//Function literal notation
+		//Function object
+		//Anonymous function
+		var f1= function(){
+			alert("Esto es un mensaje");	
+		}
+		//Funcion anonima con parametros
+		var f2=function(a,b){
+			alert("Suma="+(a+b).toString());
+		}
+		//Comprueba el resultado cuando falta un parametro f2(4)
+
+		//Funcion anonima con parametros no conocidos
+		var f3=function(){
+			var s=0;
+			for(var i=0;i<arguments.length;i++)
+			{
+				s=s+arguments[i];
+			}
+			alert("Suma de parametros="+s.toString());
+		}
+
+		//Función que devuelve un valor
+		var f4=function(a,b){
+			var c;
+			c=a-b;
+			return c;
+		}
+
+	</script>
+</head>
+<body>
+	<input type="button" value="Mostrar mensaje" onclick="f1()">
+	<input type="button" value="Mostrar suma" onclick="f2(5,2)">
+	<input type="button" value="Mostrar suma de parametros" onclick="f3(10,20,30,40,50)">
+	<input type="button" value="Mostrar resta" onclick="alert('Resta='+f4(5,2).toString())">
+	</body>
+</html>
