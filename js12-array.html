@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		/*
+		//1-definir un array
+		var a=[2,26,38,12,6,8];
+		alert(a.length);
+		*/
+
+		/*
+		//2-funcion every
+		function esPar(v,i,array){
+			return(v%2==0)?true:false;
+		}
+		var a=[2,26,38,12,6,8];
+		alert(a.every(esPar));
+		//Comprueba el resultado para diferentes valores de a
+		*/
+
+		alert([2,26,38,12,7,8].every(
+			function (v,i,array){
+			return(v%2==0)?true:false;
+		}));
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function RealizarProceso(a,b,d){
+			alert("Suma="+(a+b).toString());
+			d(a,b);
+		}
+		function MostrarResta(a,b){
+			alert("Resta="+(a-b).toString());
+		}
+		/*
+		//1-Mostramos el funcionamiento normal:
+		RealizarProceso(10,20,30);
+		MostrarResta(10,20);
+		*/
+
+		
+		//2-Agregamos una nueva funcion
+		function MostrarMultiplicacion(a,b){
+			alert("Multiplicacion="+(a*b).toString());	
+		}
+		/*
+		//Ojo antes de probar el siguiente ejemplo hay
+		//que descomentar la linea de la llamada a d(a,b)
+		//en la funcion RealizarProceso
+		RealizarProceso(10,20,MostrarResta);
+		*/
+
+		/*
+		//3-Ahora simplemente cambiamos la llamada a resta
+		//por una llamada a multiplicacion
+		RealizarProceso(10,20,MostrarMultiplicacion);
+		*/
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
