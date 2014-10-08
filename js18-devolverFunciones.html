@@ -2,6 +2,8 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
+		/*
+		//Descomentar para los ejemplos 1 y 2
 		function doProcess(a,b){
 			function mostrarSuma(){
 				alert("Suma="+(a+b).toString());
@@ -17,6 +19,7 @@
 			//2- ponemos la funcion sin ()
 			//return mostrarResta;
 		}
+		*/
 		//1-Llamada para el primer ejemplo
 		//doProcess(10,20);
 		
@@ -25,6 +28,65 @@
 		var a=doProcess(10,20);
 		alert("despues del return");
 		a(); //ahora estamos llamando a la funcion del return caso 2: ejecutaria la funcion muestraResta
+		*/
+
+		//3-Devolver una funcion anonima
+		/*
+		function doProcess(a,b){
+			function mostrarSuma(){
+				alert("Suma="+(a+b).toString());
+			}
+	
+			mostrarSuma();
+
+			return function () {
+				alert("Resta="+(a-b).toString());
+			}
+		}
+
+		var a=doProcess(20,30);
+		a();
+		*/
+		/*
+		//4-Devolver funcion anonima con parametros
+		function doProcess(a,b){
+			function mostrarSuma(){
+				alert("Suma="+(a+b).toString());
+			}
+	
+			mostrarSuma();
+
+			return function (c,d) {
+				alert("Resta="+(c-d).toString());
+			}
+		}
+
+		var a=doProcess(20,30);
+		//Ahora tengo que pasarle parametros a la funcion anonima
+		a(100,30);
+		//Comprueba lo que ocurre si la llamada fuera a();
+		*/
+		
+		/*
+		//5-Redefinir el contenido de una funcion
+		function doProcess(a,b){
+			function mostrarSuma(){
+				alert("Suma="+(a+b).toString());
+			}
+	
+			mostrarSuma();
+
+			doProcess= function (a,b) {
+				alert("Resta="+(a-b).toString());
+			}
+		}
+
+		doProcess(10,20);
+		doProcess(30,55);
+		doProcess=function(a,b){
+			alert("Suma="+(a+b).toString());
+		}
+		doProcess(5,70);
 		*/
 	</script>
 </head>
