@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	body {
+		  font-family: Helvetica, Arial, sans-serif;
+		  font-size: 12px;
+		}
+
+	h1 {
+		  font-size: 1.5em;
+		}
+	h2 {
+		  font-size: 1.2em;
+		} 
+	</style>
+	<script type="text/javascript">
+		function makeSizer(size) {
+		  return function() {
+		    document.body.style.fontSize = size + 'px';
+		  };
+		}
+
+		var size12 = makeSizer(12);
+		var size14 = makeSizer(14);
+		var size16 = makeSizer(16);
+
+	</script>
+</head>
+<body>
+	<p>Ejemplo de closure</p>
+<a href="#" id="size-12" onclick="size12()">Seleccion tamaño 12</a>
+<a href="#" id="size-14" onclick="size14()">Selecciona tamaño 14</a>
+<a href="#" id="size-16" onclick="size16()">Selecciona tamaño 16</a>
+</body>
+</html>

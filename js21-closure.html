@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//Closure
+		function inicial(n){
+			var actual=0;
+			var max=n;
+
+			alert("Soy la funcion inicial");
+
+			return function(){				
+				return (actual < max) ? actual++ : actual;
+			}
+		}
+
+		var interna;
+		interna=inicial(2);
+		alert(interna());
+		alert(interna());
+		alert(interna());
+		alert(interna());
+		alert(interna());
+	</script>
+</head>
+<body>
+
+</body>
+</html>
