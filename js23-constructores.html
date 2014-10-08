@@ -4,7 +4,7 @@
 	<script type="text/javascript">
 		//Modos de crear funciones:
 		/*
-		//1-
+		//1-Usando la palabra Function con dos parametros y el cuerpo de la funcion
 		var d = new Function("a","b","alert('Suma='+(a+b).toString())");
 		d(10,20);
 		//Es equivalente a:
@@ -13,7 +13,7 @@
 		}
 		d(10,20);
 		*/
-		//2-
+		//2-El primer argumento tiene varios parametros, el segundo es el cuerpo
 		var d = new Function("a,b,c,d","alert('Suma='+(a+b+c+d).toString())");
 		d(10,20,30,40);
 
