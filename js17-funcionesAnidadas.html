@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function doProcess(a,b){
+			function mostrarSuma(){
+				alert("Suma="+(a+b).toString());
+			}
+
+			function mostrarResta(){
+				alert("Resta="+(a-b).toString());
+			}
+			mostrarSuma();
+			mostrarResta();
+		}
+
+		doProcess(10,20);
+		//No podemos llamar directamente a las funciones interiores
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

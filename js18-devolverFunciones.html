@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function doProcess(a,b){
+			function mostrarSuma(){
+				alert("Suma="+(a+b).toString());
+			}
+
+			function mostrarResta(){
+				alert("Resta="+(a-b).toString());
+			}
+			mostrarSuma();
+			//1- si ponemos la funcion con () entonces ejecuta la funcion y devuelve lo que devuelva la funcion
+			//return mostrarResta(); 
+		
+			//2- ponemos la funcion sin ()
+			//return mostrarResta;
+		}
+		//1-Llamada para el primer ejemplo
+		//doProcess(10,20);
+		
+		/*
+		//2-Codigo del segundo ejemplo
+		var a=doProcess(10,20);
+		alert("despues del return");
+		a(); //ahora estamos llamando a la funcion del return caso 2: ejecutaria la funcion muestraResta
+		*/
+	</script>
+</head>
+<body>
+
+</body>
+</html>
