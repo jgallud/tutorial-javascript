@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var ary=[];
+		ary[0]=function(){
+			alert("Primera");
+		}
+		ary[1]=function(){
+			alert("Segunda");
+		}
+		ary[2]=30;
+		ary[3]=function(){
+			alert("Tercera");
+		}
+		//1-Un modo de invocar una funcion de un array
+		//ary[1]();
+
+		//2-
+		for(var i=0;i<ary.length;i++)
+		{
+			if (typeof ary[i] === "function")
+			{
+				ary[i]();
+			}
+			else
+			{
+				alert("No es una funcion");
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
