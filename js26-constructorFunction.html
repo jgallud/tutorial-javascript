@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//Definimos el constructor:
+		function Emp(num,nom,sal,tel){
+			this.numero = num;
+			this.nombre = nom;
+			this.salario = sal;
+			this.tlfn = tel;
+		}
+
+		//Crear un objeto de ese tipo
+		var oEmp = new Emp(1001,"Pepe",3000,"967343434");
+
+		//Acceder a los atributos:
+		//oEmp.numero
+
+		//Mostrar todos los elementos
+		for (var p in oEmp){
+			alert("clave="+p+" valor="+oEmp[p]);
+		}
+
+		//Comprueba el objeto en la consola del navegador
+		//Lanza un alert desde la consola del navegador para mostrar
+		//alguna propiedad del objeto
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
