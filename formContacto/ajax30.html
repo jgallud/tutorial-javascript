@@ -9,17 +9,13 @@
 			var met=$('#main form').attr('method');
 			var nom,m,msj; //para enviar la info con nuestro propio objeto json (sin usar serialize())
 			var target=document.getElementById("#status");
-			
+			console.log(pet+" "+met);
 			$('#main form').on('submit',function(e){
 				e.preventDefault();
-				
+				nom=document.fo.nombre.value;
+				m=document.fo.mail.value;
+				msj=document.fo.mensaje.value;			
 				$.ajax({
-					beforeSend:function(){
-						//$('#status').spin({radius:2,width:2,heigh:2,length:4});
-						nom=document.fo.nombre.value;
-						m=document.fo.mail.value;
-						msj=document.fo.mensaje.value;
-					},
 					url:pet,
 					type:met,
 					contentType:'application/json',
