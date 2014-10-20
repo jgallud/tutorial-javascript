@@ -8,7 +8,7 @@ var port=config.port;
 var exp=require("express");
 var app=exp(); //el tutorial indicaba exp.createServer()
 
-app.use(app.router);
+//app.use(app.router);
 app.use('/',exp.static(__dirname)); //+ "/formContactoMongo"));
 
 var contactoCol;
